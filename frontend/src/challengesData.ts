@@ -19,6 +19,99 @@ export interface Challenge {
 
 export const challengesData: Challenge[] = [
   {
+    id: 'say-age',
+    title: 'あなたの年齢を教えてね',
+    description:
+      '年齢（整数）を入力として受け取り、「あなたは◯歳ですね！」というメッセージを返す関数を作成します。入力と出力の基本を学びます。',
+    difficulty: '初級',
+    image:
+      'images/Debug_Master.jpeg?auto=format&fit=crop&w=800&q=80',
+    languages: ['Python'],
+    instructions: `整数 \`age\` を入力として受け取り、「あなたは◯歳ですね！」という形式の文字列を返す関数 \`say_age\` を作成してください。
+  
+  【仕様】
+  ・ 入力は0以上の整数（例: 12, 25 など）
+  ・ 出力は「あなたは◯歳ですね！」という文章
+  ・ ◯の部分に入力された数値が入ります`,
+    examples: `
+  例1:
+  入力: 10
+  出力: "あなたは10歳ですね！"
+  
+  例2:
+  入力: 0
+  出力: "あなたは0歳ですね！"
+    `,
+    video: '/videos/say-age.mp4',
+    testCases: [
+      { input: [8], expected: "あなたは8歳ですね！" },
+      { input: [13], expected: "あなたは13歳ですね！" },
+      { input: [0], expected: "あなたは0歳ですね！" }
+    ]
+  },
+  {
+    id: 'favorite-food',
+    title: '好きな食べ物を教えてね',
+    description:
+      '好きな食べ物の名前を入力として受け取り、「あなたの好きな食べ物は◯◯ですね！」というメッセージを返す関数を作成します。',
+    difficulty: '初級',
+    image:
+      'images/Debug_Master.jpeg?auto=format&fit=crop&w=800&q=80',
+    languages: ['Python'],
+    instructions: `文字列 \`food\` を入力として受け取り、「あなたの好きな食べ物は◯◯ですね！」という形式の文字列を返す関数 \`favorite_food_message\` を作成してください。
+  
+  【仕様】
+  ・ 入力は食べ物の名前（例: "カレー", "りんご" など）
+  ・ 出力は必ず「あなたの好きな食べ物は◯◯ですね！」という文章
+  ・ ◯◯の部分には入力された文字列がそのまま入ります`,
+    examples: `
+  例1:
+  入力: "カレー"
+  出力: "あなたの好きな食べ物はカレーですね！"
+  
+  例2:
+  入力: "いちご"
+  出力: "あなたの好きな食べ物はいちごですね！"
+    `,
+    video: '/videos/favorite-food.mp4',
+    testCases: [
+      { input: ["カレー"], expected: "あなたの好きな食べ物はカレーですね！" },
+      { input: ["りんご"], expected: "あなたの好きな食べ物はりんごですね！" },
+      { input: ["すし"], expected: "あなたの好きな食べ物はすしですね！" }
+    ]
+  },
+  {
+    id: 'apple-basket',
+    title: 'りんごをカゴに入れよう',
+    description:
+      'りんごの数を入力として受け取り、「カゴに◯個のりんごがあります」という文字列を返す関数を作成します。変数と出力の基本を学びます。',
+    difficulty: '初級',
+    image:
+      'images/Debug_Master.jpeg?auto=format&fit=crop&w=800&q=80',
+    languages: ['Python'],
+    instructions: `整数 \`n\` を入力として受け取り、「カゴにn個のりんごがあります」という文字列を返す関数 \`apple_message\` を作成してください。
+  
+  【仕様】
+  ・ n は 0 以上の整数とします。
+  ・ 戻り値は「カゴに◯個のりんごがあります」という形式の文字列です。
+  ・ 例: n = 3 → "カゴに3個のりんごがあります"`,
+    examples: `
+  例1:
+  入力: 2
+  出力: "カゴに2個のりんごがあります"
+  
+  例2:
+  入力: 0
+  出力: "カゴに0個のりんごがあります"
+    `,
+    video: '/videos/apple-basket.mp4',
+    testCases: [
+      { input: [1], expected: "カゴに1個のりんごがあります" },
+      { input: [5], expected: "カゴに5個のりんごがあります" },
+      { input: [0], expected: "カゴに0個のりんごがあります" }
+    ]
+  },
+  {
     id: 'sum-n',
     title: '1からnまでの整数の合計',
     description:
