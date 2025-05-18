@@ -4,6 +4,14 @@
 
 Open Hack U 2025 OSAKA
 
+## APIキーの設定
+
+1. [Notion](https://www.notion.so/matsuda-takumi/1b3179e2944180f2829df89096efdf13?pvs=4)に記載したコマンドを実行して環境変数としてAPIキーを設定する。
+
+```bash
+export GENAI_API_KEY=XXXXXXXXXX
+```
+
 ## 実行方法
 
 1. ターミナルで以下を実行し、コンテナを起動する。
@@ -20,8 +28,3 @@ docker compose up -d
 docker compose down
 ```
 
-## APIキーの設定
-
-1. `backend/.env` を作成する。
-
-2. [Notion](https://www.notion.so/matsuda-takumi/1b3179e2944180f2829df89096efdf13?pvs=4)に記載したAPIキーをコピペする。

@@ -9,5 +9,11 @@ export default defineConfig({
   },
   server: {
     host: true,
+    proxy: {
+      '/api': {
+        target: 'http://backend:8000',
+        changeOrigin: true,
+      },
+    },
   },
 });
